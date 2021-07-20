@@ -6,8 +6,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../widget_barrel.dart';
 
 const Color BANNER_BG_COLOR = Color(0xFFECF0FF);
-const String BANNER_PERSON_NAME = 'MohanKumar S';
-const String TITLE_PERSON_NAME = 'MohanKumar';
+const String BANNER_PERSON_NAME = 'Kenneth P Mogopodi';
+const String TITLE_PERSON_NAME = 'Kenneth Mogopodi';
 
 const String PORTFOLIO_IMG = 'assets/portfolio_img.jpg';
 const List<String> DESIGNATIONS = [
@@ -16,30 +16,28 @@ const List<String> DESIGNATIONS = [
 ];
 
 const String ABOUT_ME_DESC =
-    'Passionately curious developer with 3+ years of extensive experience in building, integrating, testing and supporting cutting edge mobile applications ';
+    'Creative and passionate Computer Science Student experienced in a wide range of programming languages and technologies. Arsenal of skills include Java, Flutter(Dart), Firebase, Python, Javascript, Flutter Web. Fast at learning new tech and adapting to an ever changing environment. Sperb work ethics and team work skilled.';
 
 const String DOWNLOAD_CV_URL =
-    'https://drive.google.com/uc?export=download&id=1aNLxPB5PW7fiKP-JWZJwVJTsex61MmWN';
+    'https://drive.google.com/file/d/1buBWoNFQ7UytaSSTuZy8vjpLN_HaQdvD/view?usp=sharing';
 
 const List<String> ABOUT_ME_LABELS = [
   'Name:',
   'Date of Birth:',
-  'Address:',
-  'Zip code:',
+  'Location:',
   'Email:',
   'Phone:',
 ];
 
 const List<String> ABOUT_ME_VALUES = [
-  'MohanKumar',
-  'September 23, 1995',
-  'Ernavoor, Chennai',
-  '600057',
-  'mohan.smk23@outlook.com',
-  '+9941239463',
+  'Kenneth Phatsimo Mogopodi',
+  'August 29, 1999',
+  'Botswana, South East, Gaborone',
+  'kennethmogopodi@gmail.com',
+  '+267 76-715-717',
 ];
 
-const PROJECT_COMPLETE_COUNT = '25+';
+const PROJECT_COMPLETE_COUNT = '10+';
 
 TextStyle kAboutMeValuesStyle =
     TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.grey);
@@ -48,12 +46,12 @@ TextStyle kAboutMeLabelsTextStyle =
     TextStyle(fontSize: 16, fontWeight: FontWeight.w600);
 
 const List<String> kSkillsAssets = [
-  'assets/microsoft.png',
+  //'assets/microsoft.png',
   'assets/android.png',
   'assets/java.png',
   'assets/google.png',
   'assets/flutter.png',
-  'assets/medium.png',
+  //'assets/medium.png',
 ];
 
 const List<String> kWorksAssets = [
@@ -75,100 +73,101 @@ const List<String> kWorksAssets = [
 
 const List<ResumeModel> kEducation = [
   ResumeModel(
-      period: '2013-2017',
-      title: 'Bachelor of Engineering in Electronics & Communication',
-      place: 'Saveetha University',
+      period: '2018-2022',
+      title: 'Bachelor of Scince (Hons) in Computer Systems Engineering',
+      place:
+          'Botswana Accountancy College in collabo with University of Sunderland',
       description:
-          'Pursued electronic & communication engineering in saveetha university, chennai. got hands on experience in robotics & embedded systems and learned Java language as a minor subject.'),
+          'Pursued electronic & communication engineering and got my hand on software development with Java, Artificial Intelligence, Computer Networks and Network Sercurity, Native Android Development and Web Dev, just to name few.'),
   ResumeModel(
-      period: '2012-2013',
-      title: 'Higher Secondary Education',
-      place: 'Dharam Hinduja HSC School',
+      period: '2016-2017',
+      title: 'Senior Secondary Education',
+      place: 'St Joseph’s College',
       description:
-          'A complete change of environment from SSLC institution right from syllabus to new people. Took computer science with mathematics as a major ,learnt fundamentals of computing.'),
+          'Completed my senior school with a General Certificate in Secondary Education'),
   ResumeModel(
-      period: '2010-2011',
-      title: 'SSLC',
-      place: 'Vivekananda Vidyalaya',
+      period: '2013-2015',
+      title: 'Junior Secondary Education',
+      place: 'Tloga Tloga Jnr Secondary School',
       description:
-          'A place where i done most of my schooling. done lots of creative activities to learn new concepts. done my SSLC year with a unique evaluation system.'),
+          'Completed and passed jnr school with a Junior Certificate of Secondary Education'),
 ];
 
 const List<ResumeModel> kExperience = [
   ResumeModel(
-      period: 'APR 2019 - Present',
-      title: 'Android / Flutter  Developer',
-      place: 'iStrides Technologies',
+      period: 'JAN 2021 - Present',
+      title: 'Intern Developer',
+      place: 'Digital Natives',
       description:
-          'Joined a android developer worked on wide range of applications which gave me opportunities in leaning new technologies. then worked as a Flutter developer which is a great experience i ever had.'),
-  ResumeModel(
+          'Worked on mobile application developmet with Flutter and Web Development with React. Got to use Firebase services as backend for both mobile and web apps.'),
+  /* ResumeModel(
       period: 'JUL 2017 - MAR 2019',
       title: 'Android Developer',
       place: 'Messiah software solutions pvt. Ltd',
       description:
-          'Started my career as a Android developer trainee in this organisation then im promoted to work on projects which gave me great knowledge in certain domains.'),
+          'Started my career as a Android developer trainee in this organisation then im promoted to work on projects which gave me great knowledge in certain domains.'),*/
 ];
 
 const List<ResumeModel> kCertifications = [
   ResumeModel(
-      period: '2019',
+      period: '2020',
       title: 'Flutter Development Bootcamp with Dart',
       place: 'Udemy',
       description:
           'A deep dive into flutter development learnt to build complex UI elements and got a great experience in state management of flutter application.'),
   ResumeModel(
-    period: '2019',
-    title: 'Complete Flutter app Development for Android',
-    place: 'Udemy',
+    period: '2020',
+    title: '6 months training for an Associate Android Developer Certification',
+    place: 'Pluralsight',
     description:
-        'Learnt basics of flutter and got experience in basic structure of flutter framework, debugging application ',
+        'Enhanced knowledge and skill in native android development with Java and Kotlin.',
   )
 ];
 
 List<ContactMeModel> kContactMe = [
   ContactMeModel(
       title: 'Email Address',
-      userName: 'mohan.smk23@outlook.com',
+      userName: 'kennethmogopodi@gmail.com',
       icon: Icons.mail_rounded,
       onClick: () async {
         await launch(
-            'https://mail.google.com/mail/?view=cm&fs=1&to=mohan.smk23@outlook.com&su=&body=');
+            'https://mail.google.com/mail/?view=cm&fs=1&to=kennethmogopodi@gmail.com&su=&body=');
       }),
-  ContactMeModel(
+  /*ContactMeModel(
       title: 'Facebook',
       userName: 'MohanKumar',
       icon: FontAwesome.facebook_f,
       onClick: () async {
         await launch('https://www.facebook.com/mowglie.pop/');
-      }),
+      }),*/
   ContactMeModel(
       title: 'Github',
-      userName: 'mohansmk23',
+      userName: 'Kenneth-29',
       icon: FontAwesome.github,
       onClick: () async {
-        await launch('https://github.com/mohansmk23');
+        await launch('https://github.com/Kenneth-29');
       }),
   ContactMeModel(
       title: 'LinkedIn',
-      userName: 'MohanKumar S',
+      userName: 'Kenneth Phatsimo Mogopodi',
       icon: FontAwesome.linkedin,
       onClick: () async {
-        await launch('https://www.linkedin.com/in/mohankumar-s-b23057182/');
+        await launch('https://www.linkedin.com/in/kenneth-mogopodi/');
       }),
-  ContactMeModel(
+  /*ContactMeModel(
       title: 'Medium',
       userName: 'mohan-smk23',
       icon: FontAwesome.medium,
       onClick: () async {
         await launch('https://mohan-smk23.medium.com/');
-      }),
-  ContactMeModel(
+      }),*/
+  /*ContactMeModel(
       title: 'Stack Overflow',
       userName: 'Mohankumar',
       icon: FontAwesome.medium,
       onClick: () async {
         await launch('https://stackoverflow.com/users/9882579/mohankumar');
-      }),
+      }),*/
 ];
 
 List<SkillsModel> kSkills = [
@@ -176,6 +175,7 @@ List<SkillsModel> kSkills = [
   SkillsModel('Flutter', 90),
   SkillsModel('Material design', 90),
   SkillsModel('Firebase', 75),
+  SkillsModel('ReactJs', 65)
 ];
 
 class ResumeModel {

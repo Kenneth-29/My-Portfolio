@@ -1,0 +1,1063 @@
+define(['dart_sdk', 'packages/flutter/src/foundation/change_notifier.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/value_layout_builder/src/value_layout_builder.dart', 'packages/flutter/src/rendering/layer.dart', 'packages/flutter/src/rendering/sliver.dart', 'packages/flutter/src/foundation/debug.dart', 'packages/flutter/src/painting/basic_types.dart', 'packages/flutter/src/widgets/layout_builder.dart'], (function load__packages__flutter_sticky_header__src__widgets__sliver_sticky_header_dart(dart_sdk, packages__flutter__src__foundation__change_notifier$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__value_layout_builder__src__value_layout_builder$46dart, packages__flutter__src__rendering__layer$46dart, packages__flutter__src__rendering__sliver$46dart, packages__flutter__src__foundation__debug$46dart, packages__flutter__src__painting__basic_types$46dart, packages__flutter__src__widgets__layout_builder$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _internal = dart_sdk._internal;
+  const _interceptors = dart_sdk._interceptors;
+  const math = dart_sdk.math;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const change_notifier = packages__flutter__src__foundation__change_notifier$46dart.src__foundation__change_notifier;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const value_layout_builder = packages__value_layout_builder__src__value_layout_builder$46dart.src__value_layout_builder;
+  const object = packages__flutter__src__rendering__layer$46dart.src__rendering__object;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  const sliver = packages__flutter__src__rendering__sliver$46dart.src__rendering__sliver;
+  const diagnostics = packages__flutter__src__foundation__debug$46dart.src__foundation__diagnostics;
+  const basic_types = packages__flutter__src__painting__basic_types$46dart.src__painting__basic_types;
+  const layout_builder = packages__flutter__src__widgets__layout_builder$46dart.src__widgets__layout_builder;
+  var sliver_sticky_header = Object.create(dart.library);
+  var sliver_sticky_header$ = Object.create(dart.library);
+  var flutter_sticky_header = Object.create(dart.library);
+  var $_equals = dartx._equals;
+  var $add = dartx.add;
+  var $abs = dartx.abs;
+  var $clamp = dartx.clamp;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    ValueLayoutBuilderOfSliverStickyHeaderState: () => (T.ValueLayoutBuilderOfSliverStickyHeaderState = dart.constFn(value_layout_builder.ValueLayoutBuilder$(sliver_sticky_header.SliverStickyHeaderState)))(),
+    BoxValueConstraintsOfSliverStickyHeaderState: () => (T.BoxValueConstraintsOfSliverStickyHeaderState = dart.constFn(value_layout_builder.BoxValueConstraints$(sliver_sticky_header.SliverStickyHeaderState)))(),
+    BuildContextAndBoxValueConstraintsOfSliverStickyHeaderStateToWidget: () => (T.BuildContextAndBoxValueConstraintsOfSliverStickyHeaderStateToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext, T.BoxValueConstraintsOfSliverStickyHeaderState()])))(),
+    intN: () => (T.intN = dart.constFn(dart.nullable(core.int)))(),
+    RenderBoxN: () => (T.RenderBoxN = dart.constFn(dart.nullable(box.RenderBox)))(),
+    RenderSliverN: () => (T.RenderSliverN = dart.constFn(dart.nullable(sliver.RenderSliver)))(),
+    JSArrayOfDiagnosticsNode: () => (T.JSArrayOfDiagnosticsNode = dart.constFn(_interceptors.JSArray$(diagnostics.DiagnosticsNode)))(),
+    SliverPhysicalParentDataN: () => (T.SliverPhysicalParentDataN = dart.constFn(dart.nullable(sliver.SliverPhysicalParentData)))(),
+    RenderConstrainedLayoutBuilderOfBoxValueConstraintsOfSliverStickyHeaderState$RenderBox: () => (T.RenderConstrainedLayoutBuilderOfBoxValueConstraintsOfSliverStickyHeaderState$RenderBox = dart.constFn(layout_builder.RenderConstrainedLayoutBuilder$(T.BoxValueConstraintsOfSliverStickyHeaderState(), box.RenderBox)))(),
+    SliverStickyHeaderStateN: () => (T.SliverStickyHeaderStateN = dart.constFn(dart.nullable(sliver_sticky_header.SliverStickyHeaderState)))(),
+    BoxValueConstraintsOfSliverStickyHeaderStateN: () => (T.BoxValueConstraintsOfSliverStickyHeaderStateN = dart.constFn(value_layout_builder.BoxValueConstraints$(T.SliverStickyHeaderStateN())))(),
+    RenderObjectN: () => (T.RenderObjectN = dart.constFn(dart.nullable(object.RenderObject)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 7,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 88,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.6.0/lib/src/widgets/sliver_sticky_header.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 13,
+        [_Location_line]: 177,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 176,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.6.0/lib/src/widgets/sliver_sticky_header.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 9,
+        [_Location_line]: 286,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9], T._LocationL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 285,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.6.0/lib/src/widgets/sliver_sticky_header.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overlapsContent",
+        [_Location_column]: 7,
+        [_Location_line]: 281,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "sliver",
+        [_Location_column]: 7,
+        [_Location_line]: 282,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "sticky",
+        [_Location_column]: 7,
+        [_Location_line]: 283,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 7,
+        [_Location_line]: 284,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "header",
+        [_Location_column]: 7,
+        [_Location_line]: 285,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 280,
+        [_Location_file]: "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.6.0/lib/src/widgets/sliver_sticky_header.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: basic_types.Axis.prototype,
+        [_name]: "Axis.vertical",
+        index: 1
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: basic_types.Axis.prototype,
+        [_name]: "Axis.horizontal",
+        index: 0
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: basic_types.AxisDirection.prototype,
+        [_name]: "AxisDirection.up",
+        index: 0
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: basic_types.AxisDirection.prototype,
+        [_name]: "AxisDirection.right",
+        index: 1
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: basic_types.AxisDirection.prototype,
+        [_name]: "AxisDirection.down",
+        index: 2
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: basic_types.AxisDirection.prototype,
+        [_name]: "AxisDirection.left",
+        index: 3
+      });
+    }
+  }, false);
+  var C = Array(23).fill(void 0);
+  var I = [
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.6.0/lib/src/widgets/sliver_sticky_header.dart",
+    "package:flutter_sticky_header/src/widgets/sliver_sticky_header.dart",
+    "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_sticky_header-0.6.0/lib/src/rendering/sliver_sticky_header.dart",
+    "package:flutter_sticky_header/src/rendering/sliver_sticky_header.dart"
+  ];
+  var _stickyHeaderScrollOffset = dart.privateName(sliver_sticky_header, "_stickyHeaderScrollOffset");
+  const Object_ChangeNotifier$36 = class Object_ChangeNotifier extends core.Object {};
+  (Object_ChangeNotifier$36.new = function() {
+    change_notifier.ChangeNotifier.new.call(this);
+  }).prototype = Object_ChangeNotifier$36.prototype;
+  dart.applyMixin(Object_ChangeNotifier$36, change_notifier.ChangeNotifier);
+  sliver_sticky_header.StickyHeaderController = class StickyHeaderController extends Object_ChangeNotifier$36 {
+    get stickyHeaderScrollOffset() {
+      return this[_stickyHeaderScrollOffset];
+    }
+    set stickyHeaderScrollOffset(value) {
+      if (value == null) dart.nullFailed(I[0], 23, 39, "value");
+      if (this[_stickyHeaderScrollOffset] != value) {
+        this[_stickyHeaderScrollOffset] = value;
+        this.notifyListeners();
+      }
+    }
+  };
+  (sliver_sticky_header.StickyHeaderController.new = function() {
+    this[_stickyHeaderScrollOffset] = 0.0;
+    sliver_sticky_header.StickyHeaderController.__proto__.new.call(this);
+    ;
+  }).prototype = sliver_sticky_header.StickyHeaderController.prototype;
+  dart.addTypeTests(sliver_sticky_header.StickyHeaderController);
+  dart.addTypeCaches(sliver_sticky_header.StickyHeaderController);
+  dart.setGetterSignature(sliver_sticky_header.StickyHeaderController, () => ({
+    __proto__: dart.getGetters(sliver_sticky_header.StickyHeaderController.__proto__),
+    stickyHeaderScrollOffset: core.double
+  }));
+  dart.setSetterSignature(sliver_sticky_header.StickyHeaderController, () => ({
+    __proto__: dart.getSetters(sliver_sticky_header.StickyHeaderController.__proto__),
+    stickyHeaderScrollOffset: core.double
+  }));
+  dart.setLibraryUri(sliver_sticky_header.StickyHeaderController, I[1]);
+  dart.setFieldSignature(sliver_sticky_header.StickyHeaderController, () => ({
+    __proto__: dart.getFields(sliver_sticky_header.StickyHeaderController.__proto__),
+    [_stickyHeaderScrollOffset]: dart.fieldType(core.double)
+  }));
+  var child$ = dart.privateName(sliver_sticky_header, "DefaultStickyHeaderController.child");
+  sliver_sticky_header.DefaultStickyHeaderController = class DefaultStickyHeaderController extends framework.StatefulWidget {
+    get child() {
+      return this[child$];
+    }
+    set child(value) {
+      super.child = value;
+    }
+    static of(context) {
+      let t0;
+      if (context == null) dart.nullFailed(I[0], 59, 50, "context");
+      let scope = context.dependOnInheritedWidgetOfExactType(sliver_sticky_header._StickyHeaderControllerScope);
+      t0 = scope;
+      return t0 == null ? null : t0.controller;
+    }
+    createState() {
+      return new sliver_sticky_header._DefaultStickyHeaderControllerState.new();
+    }
+  };
+  (sliver_sticky_header.DefaultStickyHeaderController.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    if (child == null) dart.nullFailed(I[0], 42, 19, "child");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[child$] = child;
+    sliver_sticky_header.DefaultStickyHeaderController.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = sliver_sticky_header.DefaultStickyHeaderController.prototype;
+  dart.addTypeTests(sliver_sticky_header.DefaultStickyHeaderController);
+  dart.addTypeCaches(sliver_sticky_header.DefaultStickyHeaderController);
+  dart.setMethodSignature(sliver_sticky_header.DefaultStickyHeaderController, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header.DefaultStickyHeaderController.__proto__),
+    createState: dart.fnType(sliver_sticky_header._DefaultStickyHeaderControllerState, [])
+  }));
+  dart.setLibraryUri(sliver_sticky_header.DefaultStickyHeaderController, I[1]);
+  dart.setFieldSignature(sliver_sticky_header.DefaultStickyHeaderController, () => ({
+    __proto__: dart.getFields(sliver_sticky_header.DefaultStickyHeaderController.__proto__),
+    child: dart.finalFieldType(framework.Widget)
+  }));
+  var _controller = dart.privateName(sliver_sticky_header, "_controller");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  sliver_sticky_header._DefaultStickyHeaderControllerState = class _DefaultStickyHeaderControllerState extends framework.State$(sliver_sticky_header.DefaultStickyHeaderController) {
+    initState() {
+      super.initState();
+      this[_controller] = new sliver_sticky_header.StickyHeaderController.new();
+    }
+    dispose() {
+      dart.nullCheck(this[_controller]).dispose();
+      super.dispose();
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 87, 29, "context");
+      return new sliver_sticky_header._StickyHeaderControllerScope.new({controller: this[_controller], child: this.widget.child, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+    }
+  };
+  (sliver_sticky_header._DefaultStickyHeaderControllerState.new = function() {
+    this[_controller] = null;
+    sliver_sticky_header._DefaultStickyHeaderControllerState.__proto__.new.call(this);
+    ;
+  }).prototype = sliver_sticky_header._DefaultStickyHeaderControllerState.prototype;
+  dart.addTypeTests(sliver_sticky_header._DefaultStickyHeaderControllerState);
+  dart.addTypeCaches(sliver_sticky_header._DefaultStickyHeaderControllerState);
+  dart.setMethodSignature(sliver_sticky_header._DefaultStickyHeaderControllerState, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header._DefaultStickyHeaderControllerState.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(sliver_sticky_header._DefaultStickyHeaderControllerState, I[1]);
+  dart.setFieldSignature(sliver_sticky_header._DefaultStickyHeaderControllerState, () => ({
+    __proto__: dart.getFields(sliver_sticky_header._DefaultStickyHeaderControllerState.__proto__),
+    [_controller]: dart.fieldType(dart.nullable(sliver_sticky_header.StickyHeaderController))
+  }));
+  var controller$ = dart.privateName(sliver_sticky_header, "_StickyHeaderControllerScope.controller");
+  sliver_sticky_header._StickyHeaderControllerScope = class _StickyHeaderControllerScope extends framework.InheritedWidget {
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    updateShouldNotify(old) {
+      sliver_sticky_header._StickyHeaderControllerScope.as(old);
+      if (old == null) dart.nullFailed(I[0], 105, 56, "old");
+      return !dart.equals(this.controller, old.controller);
+    }
+  };
+  (sliver_sticky_header._StickyHeaderControllerScope.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    if (child == null) dart.nullFailed(I[0], 99, 21, "child");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    sliver_sticky_header._StickyHeaderControllerScope.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = sliver_sticky_header._StickyHeaderControllerScope.prototype;
+  dart.addTypeTests(sliver_sticky_header._StickyHeaderControllerScope);
+  dart.addTypeCaches(sliver_sticky_header._StickyHeaderControllerScope);
+  dart.setMethodSignature(sliver_sticky_header._StickyHeaderControllerScope, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header._StickyHeaderControllerScope.__proto__),
+    updateShouldNotify: dart.fnType(core.bool, [dart.nullable(core.Object)])
+  }));
+  dart.setLibraryUri(sliver_sticky_header._StickyHeaderControllerScope, I[1]);
+  dart.setFieldSignature(sliver_sticky_header._StickyHeaderControllerScope, () => ({
+    __proto__: dart.getFields(sliver_sticky_header._StickyHeaderControllerScope.__proto__),
+    controller: dart.finalFieldType(dart.nullable(sliver_sticky_header.StickyHeaderController))
+  }));
+  var scrollPercentage$ = dart.privateName(sliver_sticky_header, "SliverStickyHeaderState.scrollPercentage");
+  var isPinned$ = dart.privateName(sliver_sticky_header, "SliverStickyHeaderState.isPinned");
+  sliver_sticky_header.SliverStickyHeaderState = class SliverStickyHeaderState extends core.Object {
+    get scrollPercentage() {
+      return this[scrollPercentage$];
+    }
+    set scrollPercentage(value) {
+      super.scrollPercentage = value;
+    }
+    get isPinned() {
+      return this[isPinned$];
+    }
+    set isPinned(value) {
+      super.isPinned = value;
+    }
+    _equals(other) {
+      if (other == null) return false;
+      if (this === other) return true;
+      if (!sliver_sticky_header.SliverStickyHeaderState.is(other)) return false;
+      let typedOther = other;
+      return this.scrollPercentage == typedOther.scrollPercentage && this.isPinned == typedOther.isPinned;
+    }
+    get hashCode() {
+      return ui.hashValues(this.scrollPercentage, this.isPinned);
+    }
+  };
+  (sliver_sticky_header.SliverStickyHeaderState.new = function(scrollPercentage, isPinned) {
+    if (scrollPercentage == null) dart.nullFailed(I[0], 114, 10, "scrollPercentage");
+    if (isPinned == null) dart.nullFailed(I[0], 115, 10, "isPinned");
+    this[scrollPercentage$] = scrollPercentage;
+    this[isPinned$] = isPinned;
+    ;
+  }).prototype = sliver_sticky_header.SliverStickyHeaderState.prototype;
+  dart.addTypeTests(sliver_sticky_header.SliverStickyHeaderState);
+  dart.addTypeCaches(sliver_sticky_header.SliverStickyHeaderState);
+  dart.setMethodSignature(sliver_sticky_header.SliverStickyHeaderState, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header.SliverStickyHeaderState.__proto__),
+    _equals: dart.fnType(core.bool, [dart.dynamic]),
+    [$_equals]: dart.fnType(core.bool, [dart.dynamic])
+  }));
+  dart.setLibraryUri(sliver_sticky_header.SliverStickyHeaderState, I[1]);
+  dart.setFieldSignature(sliver_sticky_header.SliverStickyHeaderState, () => ({
+    __proto__: dart.getFields(sliver_sticky_header.SliverStickyHeaderState.__proto__),
+    scrollPercentage: dart.finalFieldType(core.double),
+    isPinned: dart.finalFieldType(core.bool)
+  }));
+  dart.defineExtensionMethods(sliver_sticky_header.SliverStickyHeaderState, ['_equals']);
+  dart.defineExtensionAccessors(sliver_sticky_header.SliverStickyHeaderState, ['hashCode']);
+  var header$ = dart.privateName(sliver_sticky_header, "SliverStickyHeader.header");
+  var sliver$ = dart.privateName(sliver_sticky_header, "SliverStickyHeader.sliver");
+  var overlapsContent$ = dart.privateName(sliver_sticky_header, "SliverStickyHeader.overlapsContent");
+  var sticky$ = dart.privateName(sliver_sticky_header, "SliverStickyHeader.sticky");
+  var controller$0 = dart.privateName(sliver_sticky_header, "SliverStickyHeader.controller");
+  sliver_sticky_header.SliverStickyHeader = class SliverStickyHeader extends framework.RenderObjectWidget {
+    get header() {
+      return this[header$];
+    }
+    set header(value) {
+      super.header = value;
+    }
+    get sliver() {
+      return this[sliver$];
+    }
+    set sliver(value) {
+      super.sliver = value;
+    }
+    get overlapsContent() {
+      return this[overlapsContent$];
+    }
+    set overlapsContent(value) {
+      super.overlapsContent = value;
+    }
+    get sticky() {
+      return this[sticky$];
+    }
+    set sticky(value) {
+      super.sticky = value;
+    }
+    get controller() {
+      return this[controller$0];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    createRenderObject(context) {
+      let t0;
+      if (context == null) dart.nullFailed(I[0], 207, 60, "context");
+      return new sliver_sticky_header$.RenderSliverStickyHeader.new({overlapsContent: this.overlapsContent, sticky: this.sticky, controller: (t0 = this.controller, t0 == null ? sliver_sticky_header.DefaultStickyHeaderController.of(context) : t0)});
+    }
+    createElement() {
+      return new sliver_sticky_header.SliverStickyHeaderRenderObjectElement.new(this);
+    }
+    updateRenderObject(context, renderObject) {
+      let t1, t0;
+      if (context == null) dart.nullFailed(I[0], 221, 18, "context");
+      sliver_sticky_header$.RenderSliverStickyHeader.as(renderObject);
+      if (renderObject == null) dart.nullFailed(I[0], 222, 30, "renderObject");
+      t0 = renderObject;
+      (() => {
+        t0.overlapsContent = this.overlapsContent;
+        t0.sticky = this.sticky;
+        t0.controller = (t1 = this.controller, t1 == null ? sliver_sticky_header.DefaultStickyHeaderController.of(context) : t1);
+        return t0;
+      })();
+    }
+  };
+  (sliver_sticky_header.SliverStickyHeader.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let header = opts && 'header' in opts ? opts.header : null;
+    let sliver = opts && 'sliver' in opts ? opts.sliver : null;
+    let overlapsContent = opts && 'overlapsContent' in opts ? opts.overlapsContent : false;
+    if (overlapsContent == null) dart.nullFailed(I[0], 155, 10, "overlapsContent");
+    let sticky = opts && 'sticky' in opts ? opts.sticky : true;
+    if (sticky == null) dart.nullFailed(I[0], 156, 10, "sticky");
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[header$] = header;
+    this[sliver$] = sliver;
+    this[overlapsContent$] = overlapsContent;
+    this[sticky$] = sticky;
+    this[controller$0] = controller;
+    sliver_sticky_header.SliverStickyHeader.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = sliver_sticky_header.SliverStickyHeader.prototype;
+  (sliver_sticky_header.SliverStickyHeader.builder = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let builder = opts && 'builder' in opts ? opts.builder : null;
+    if (builder == null) dart.nullFailed(I[0], 169, 46, "builder");
+    let sliver = opts && 'sliver' in opts ? opts.sliver : null;
+    let overlapsContent = opts && 'overlapsContent' in opts ? opts.overlapsContent : false;
+    if (overlapsContent == null) dart.nullFailed(I[0], 171, 10, "overlapsContent");
+    let sticky = opts && 'sticky' in opts ? opts.sticky : true;
+    if (sticky == null) dart.nullFailed(I[0], 172, 10, "sticky");
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    sliver_sticky_header.SliverStickyHeader.new.call(this, {key: key, header: new (T.ValueLayoutBuilderOfSliverStickyHeaderState()).new({builder: dart.fn((context, constraints) => {
+          if (context == null) dart.nullFailed(I[0], 177, 23, "context");
+          if (constraints == null) dart.nullFailed(I[0], 177, 32, "constraints");
+          return builder(context, constraints.value);
+        }, T.BuildContextAndBoxValueConstraintsOfSliverStickyHeaderStateToWidget()), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), sliver: sliver, overlapsContent: overlapsContent, sticky: sticky, controller: controller, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+  }).prototype = sliver_sticky_header.SliverStickyHeader.prototype;
+  dart.addTypeTests(sliver_sticky_header.SliverStickyHeader);
+  dart.addTypeCaches(sliver_sticky_header.SliverStickyHeader);
+  dart.setMethodSignature(sliver_sticky_header.SliverStickyHeader, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header.SliverStickyHeader.__proto__),
+    createRenderObject: dart.fnType(sliver_sticky_header$.RenderSliverStickyHeader, [framework.BuildContext]),
+    createElement: dart.fnType(sliver_sticky_header.SliverStickyHeaderRenderObjectElement, [])
+  }));
+  dart.setLibraryUri(sliver_sticky_header.SliverStickyHeader, I[1]);
+  dart.setFieldSignature(sliver_sticky_header.SliverStickyHeader, () => ({
+    __proto__: dart.getFields(sliver_sticky_header.SliverStickyHeader.__proto__),
+    header: dart.finalFieldType(dart.nullable(framework.Widget)),
+    sliver: dart.finalFieldType(dart.nullable(framework.Widget)),
+    overlapsContent: dart.finalFieldType(core.bool),
+    sticky: dart.finalFieldType(core.bool),
+    controller: dart.finalFieldType(dart.nullable(sliver_sticky_header.StickyHeaderController))
+  }));
+  var builder$ = dart.privateName(sliver_sticky_header, "SliverStickyHeaderBuilder.builder");
+  var sliver$0 = dart.privateName(sliver_sticky_header, "SliverStickyHeaderBuilder.sliver");
+  var overlapsContent$0 = dart.privateName(sliver_sticky_header, "SliverStickyHeaderBuilder.overlapsContent");
+  var sticky$0 = dart.privateName(sliver_sticky_header, "SliverStickyHeaderBuilder.sticky");
+  var controller$1 = dart.privateName(sliver_sticky_header, "SliverStickyHeaderBuilder.controller");
+  sliver_sticky_header.SliverStickyHeaderBuilder = class SliverStickyHeaderBuilder extends framework.StatelessWidget {
+    get builder() {
+      return this[builder$];
+    }
+    set builder(value) {
+      super.builder = value;
+    }
+    get sliver() {
+      return this[sliver$0];
+    }
+    set sliver(value) {
+      super.sliver = value;
+    }
+    get overlapsContent() {
+      return this[overlapsContent$0];
+    }
+    set overlapsContent(value) {
+      super.overlapsContent = value;
+    }
+    get sticky() {
+      return this[sticky$0];
+    }
+    set sticky(value) {
+      super.sticky = value;
+    }
+    get controller() {
+      return this[controller$1];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 279, 29, "context");
+      return new sliver_sticky_header.SliverStickyHeader.new({overlapsContent: this.overlapsContent, sliver: this.sliver, sticky: this.sticky, controller: this.controller, header: new (T.ValueLayoutBuilderOfSliverStickyHeaderState()).new({builder: dart.fn((context, constraints) => {
+            let t1, t0;
+            if (context == null) dart.nullFailed(I[0], 286, 19, "context");
+            if (constraints == null) dart.nullFailed(I[0], 286, 28, "constraints");
+            t0 = context;
+            t1 = constraints.value;
+            return this.builder(t0, t1);
+          }, T.BuildContextAndBoxValueConstraintsOfSliverStickyHeaderStateToWidget()), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10});
+    }
+  };
+  (sliver_sticky_header.SliverStickyHeaderBuilder.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let builder = opts && 'builder' in opts ? opts.builder : null;
+    if (builder == null) dart.nullFailed(I[0], 248, 19, "builder");
+    let sliver = opts && 'sliver' in opts ? opts.sliver : null;
+    let overlapsContent = opts && 'overlapsContent' in opts ? opts.overlapsContent : false;
+    if (overlapsContent == null) dart.nullFailed(I[0], 250, 10, "overlapsContent");
+    let sticky = opts && 'sticky' in opts ? opts.sticky : true;
+    if (sticky == null) dart.nullFailed(I[0], 251, 10, "sticky");
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[builder$] = builder;
+    this[sliver$0] = sliver;
+    this[overlapsContent$0] = overlapsContent;
+    this[sticky$0] = sticky;
+    this[controller$1] = controller;
+    sliver_sticky_header.SliverStickyHeaderBuilder.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = sliver_sticky_header.SliverStickyHeaderBuilder.prototype;
+  dart.addTypeTests(sliver_sticky_header.SliverStickyHeaderBuilder);
+  dart.addTypeCaches(sliver_sticky_header.SliverStickyHeaderBuilder);
+  dart.setMethodSignature(sliver_sticky_header.SliverStickyHeaderBuilder, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header.SliverStickyHeaderBuilder.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(sliver_sticky_header.SliverStickyHeaderBuilder, I[1]);
+  dart.setFieldSignature(sliver_sticky_header.SliverStickyHeaderBuilder, () => ({
+    __proto__: dart.getFields(sliver_sticky_header.SliverStickyHeaderBuilder.__proto__),
+    builder: dart.finalFieldType(dart.fnType(framework.Widget, [framework.BuildContext, sliver_sticky_header.SliverStickyHeaderState])),
+    sliver: dart.finalFieldType(dart.nullable(framework.Widget)),
+    overlapsContent: dart.finalFieldType(core.bool),
+    sticky: dart.finalFieldType(core.bool),
+    controller: dart.finalFieldType(dart.nullable(sliver_sticky_header.StickyHeaderController))
+  }));
+  var _header = dart.privateName(sliver_sticky_header, "_header");
+  var _sliver = dart.privateName(sliver_sticky_header, "_sliver");
+  sliver_sticky_header.SliverStickyHeaderRenderObjectElement = class SliverStickyHeaderRenderObjectElement extends framework.RenderObjectElement {
+    get widget() {
+      return sliver_sticky_header.SliverStickyHeader.as(super.widget);
+    }
+    visitChildren(visitor) {
+      if (visitor == null) dart.nullFailed(I[0], 305, 37, "visitor");
+      if (this[_header] != null) visitor(dart.nullCheck(this[_header]));
+      if (this[_sliver] != null) visitor(dart.nullCheck(this[_sliver]));
+    }
+    forgetChild(child) {
+      if (child == null) dart.nullFailed(I[0], 311, 28, "child");
+      super.forgetChild(child);
+      if (dart.equals(child, this[_header])) this[_header] = null;
+      if (dart.equals(child, this[_sliver])) this[_sliver] = null;
+    }
+    mount(parent, newSlot) {
+      super.mount(parent, newSlot);
+      this[_header] = this.updateChild(this[_header], this.widget.header, 0);
+      this[_sliver] = this.updateChild(this[_sliver], this.widget.sliver, 1);
+    }
+    update(newWidget) {
+      sliver_sticky_header.SliverStickyHeader.as(newWidget);
+      if (newWidget == null) dart.nullFailed(I[0], 325, 34, "newWidget");
+      super.update(newWidget);
+      if (!dart.equals(this.widget, newWidget)) dart.assertFailed(null, I[0], 327, 12, "widget == newWidget");
+      this[_header] = this.updateChild(this[_header], this.widget.header, 0);
+      this[_sliver] = this.updateChild(this[_sliver], this.widget.sliver, 1);
+    }
+    insertRenderObjectChild(child, slot) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(I[0], 333, 45, "child");
+      T.intN().as(slot);
+      let renderObject = sliver_sticky_header$.RenderSliverStickyHeader.as(this.renderObject);
+      if (slot === 0) renderObject.header = T.RenderBoxN().as(child);
+      if (slot === 1) renderObject.child = T.RenderSliverN().as(child);
+      if (!dart.equals(renderObject, this.renderObject)) dart.assertFailed(null, I[0], 338, 12, "renderObject == this.renderObject");
+    }
+    moveRenderObjectChild(child, slot, newSlot) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(I[0], 342, 43, "child");
+      if (!false) dart.assertFailed(null, I[0], 343, 12, "false");
+    }
+    removeRenderObjectChild(child, slot) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(I[0], 347, 45, "child");
+      let renderObject = sliver_sticky_header$.RenderSliverStickyHeader.as(this.renderObject);
+      if (dart.equals(renderObject.header, child)) renderObject.header = null;
+      if (dart.equals(renderObject.child, child)) renderObject.child = null;
+      if (!dart.equals(renderObject, this.renderObject)) dart.assertFailed(null, I[0], 352, 12, "renderObject == this.renderObject");
+    }
+  };
+  (sliver_sticky_header.SliverStickyHeaderRenderObjectElement.new = function(widget) {
+    if (widget == null) dart.nullFailed(I[0], 294, 60, "widget");
+    this[_header] = null;
+    this[_sliver] = null;
+    sliver_sticky_header.SliverStickyHeaderRenderObjectElement.__proto__.new.call(this, widget);
+    ;
+  }).prototype = sliver_sticky_header.SliverStickyHeaderRenderObjectElement.prototype;
+  dart.addTypeTests(sliver_sticky_header.SliverStickyHeaderRenderObjectElement);
+  dart.addTypeCaches(sliver_sticky_header.SliverStickyHeaderRenderObjectElement);
+  dart.setMethodSignature(sliver_sticky_header.SliverStickyHeaderRenderObjectElement, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header.SliverStickyHeaderRenderObjectElement.__proto__),
+    mount: dart.fnType(dart.void, [dart.nullable(framework.Element), dart.dynamic])
+  }));
+  dart.setGetterSignature(sliver_sticky_header.SliverStickyHeaderRenderObjectElement, () => ({
+    __proto__: dart.getGetters(sliver_sticky_header.SliverStickyHeaderRenderObjectElement.__proto__),
+    widget: sliver_sticky_header.SliverStickyHeader
+  }));
+  dart.setLibraryUri(sliver_sticky_header.SliverStickyHeaderRenderObjectElement, I[1]);
+  dart.setFieldSignature(sliver_sticky_header.SliverStickyHeaderRenderObjectElement, () => ({
+    __proto__: dart.getFields(sliver_sticky_header.SliverStickyHeaderRenderObjectElement.__proto__),
+    [_header]: dart.fieldType(dart.nullable(framework.Element)),
+    [_sliver]: dart.fieldType(dart.nullable(framework.Element))
+  }));
+  var _oldState = dart.privateName(sliver_sticky_header$, "_oldState");
+  var _headerExtent = dart.privateName(sliver_sticky_header$, "_headerExtent");
+  var __RenderSliverStickyHeader__isPinned = dart.privateName(sliver_sticky_header$, "_#RenderSliverStickyHeader#_isPinned");
+  var __RenderSliverStickyHeader__isPinned_isSet = dart.privateName(sliver_sticky_header$, "_#RenderSliverStickyHeader#_isPinned#isSet");
+  var _header$ = dart.privateName(sliver_sticky_header$, "_header");
+  var _child = dart.privateName(sliver_sticky_header$, "_child");
+  var _overlapsContent = dart.privateName(sliver_sticky_header$, "_overlapsContent");
+  var _sticky = dart.privateName(sliver_sticky_header$, "_sticky");
+  var _controller$ = dart.privateName(sliver_sticky_header$, "_controller");
+  var _isPinned = dart.privateName(sliver_sticky_header$, "_isPinned");
+  var _name = dart.privateName(basic_types, "_name");
+  const RenderSliver_RenderSliverHelpers$36 = class RenderSliver_RenderSliverHelpers extends sliver.RenderSliver {};
+  (RenderSliver_RenderSliverHelpers$36.new = function() {
+    RenderSliver_RenderSliverHelpers$36.__proto__.new.call(this);
+  }).prototype = RenderSliver_RenderSliverHelpers$36.prototype;
+  dart.applyMixin(RenderSliver_RenderSliverHelpers$36, sliver.RenderSliverHelpers);
+  sliver_sticky_header$.RenderSliverStickyHeader = class RenderSliverStickyHeader extends RenderSliver_RenderSliverHelpers$36 {
+    get [_isPinned]() {
+      let t0;
+      return dart.test(this[__RenderSliverStickyHeader__isPinned_isSet]) ? (t0 = this[__RenderSliverStickyHeader__isPinned], t0) : dart.throw(new _internal.LateError.fieldNI("_isPinned"));
+    }
+    set [_isPinned](t0) {
+      if (t0 == null) dart.nullFailed(I[2], 29, 13, "null");
+      this[__RenderSliverStickyHeader__isPinned_isSet] = true;
+      this[__RenderSliverStickyHeader__isPinned] = t0;
+    }
+    get overlapsContent() {
+      return this[_overlapsContent];
+    }
+    set overlapsContent(value) {
+      if (value == null) dart.nullFailed(I[2], 34, 28, "value");
+      if (this[_overlapsContent] == value) return;
+      this[_overlapsContent] = value;
+      this.markNeedsLayout();
+    }
+    get sticky() {
+      return this[_sticky];
+    }
+    set sticky(value) {
+      if (value == null) dart.nullFailed(I[2], 43, 19, "value");
+      if (this[_sticky] == value) return;
+      this[_sticky] = value;
+      this.markNeedsLayout();
+    }
+    get controller() {
+      return this[_controller$];
+    }
+    set controller(value) {
+      if (dart.equals(this[_controller$], value)) return;
+      if (this[_controller$] != null && value != null) {
+        value.stickyHeaderScrollOffset = dart.nullCheck(this[_controller$]).stickyHeaderScrollOffset;
+      }
+      this[_controller$] = value;
+    }
+    get header() {
+      return this[_header$];
+    }
+    set header(value) {
+      if (this[_header$] != null) this.dropChild(dart.nullCheck(this[_header$]));
+      this[_header$] = value;
+      if (this[_header$] != null) this.adoptChild(dart.nullCheck(this[_header$]));
+    }
+    get child() {
+      return this[_child];
+    }
+    set child(value) {
+      if (this[_child] != null) this.dropChild(dart.nullCheck(this[_child]));
+      this[_child] = value;
+      if (this[_child] != null) this.adoptChild(dart.nullCheck(this[_child]));
+    }
+    setupParentData(child) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(I[2], 82, 37, "child");
+      if (!sliver.SliverPhysicalParentData.is(child.parentData)) child.parentData = new sliver.SliverPhysicalParentData.new();
+    }
+    attach(owner) {
+      object.PipelineOwner.as(owner);
+      if (owner == null) dart.nullFailed(I[2], 88, 29, "owner");
+      super.attach(owner);
+      if (this[_header$] != null) dart.nullCheck(this[_header$]).attach(owner);
+      if (this[_child] != null) dart.nullCheck(this[_child]).attach(owner);
+    }
+    detach() {
+      super.detach();
+      if (this[_header$] != null) dart.nullCheck(this[_header$]).detach();
+      if (this[_child] != null) dart.nullCheck(this[_child]).detach();
+    }
+    redepthChildren() {
+      if (this[_header$] != null) this.redepthChild(dart.nullCheck(this[_header$]));
+      if (this[_child] != null) this.redepthChild(dart.nullCheck(this[_child]));
+    }
+    visitChildren(visitor) {
+      if (visitor == null) dart.nullFailed(I[2], 108, 42, "visitor");
+      if (this[_header$] != null) visitor(dart.nullCheck(this[_header$]));
+      if (this[_child] != null) visitor(dart.nullCheck(this[_child]));
+    }
+    debugDescribeChildren() {
+      let result = T.JSArrayOfDiagnosticsNode().of([]);
+      if (this.header != null) {
+        result[$add](dart.nullCheck(this.header).toDiagnosticsNode({name: "header"}));
+      }
+      if (this.child != null) {
+        result[$add](dart.nullCheck(this.child).toDiagnosticsNode({name: "child"}));
+      }
+      return result;
+    }
+    computeHeaderExtent() {
+      if (this.header == null) return 0.0;
+      if (!dart.test(dart.nullCheck(this.header).hasSize)) dart.assertFailed(null, I[2], 127, 12, "header!.hasSize");
+      switch (this.constraints.axis) {
+        case C[17] || CT.C17:
+        {
+          return dart.nullCheck(this.header).size.height;
+        }
+        case C[18] || CT.C18:
+        {
+          return dart.nullCheck(this.header).size.width;
+        }
+        default:
+        {
+          dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+        }
+      }
+    }
+    get headerLogicalExtent() {
+      return dart.test(this.overlapsContent) ? 0.0 : this[_headerExtent];
+    }
+    performLayout() {
+      let t1, t2, t1$, t1$0, t1$1;
+      if (this.header == null && this.child == null) {
+        this.geometry = sliver.SliverGeometry.zero;
+        return;
+      }
+      let axisDirection = sliver.applyGrowthDirectionToAxisDirection(this.constraints.axisDirection, this.constraints.growthDirection);
+      if (this.header != null) {
+        dart.nullCheck(this.header).layout(new (T.BoxValueConstraintsOfSliverStickyHeaderState()).new({value: (t1 = this[_oldState], t1 == null ? new sliver_sticky_header.SliverStickyHeaderState.new(0.0, false) : t1), constraints: this.constraints.asBoxConstraints()}), {parentUsesSize: true});
+        this[_headerExtent] = this.computeHeaderExtent();
+      }
+      let headerExtent = dart.nullCheck(this.headerLogicalExtent);
+      let headerPaintExtent = this.calculatePaintOffset(this.constraints, {from: 0.0, to: headerExtent});
+      let headerCacheExtent = this.calculateCacheOffset(this.constraints, {from: 0.0, to: headerExtent});
+      if (this.child == null) {
+        this.geometry = new sliver.SliverGeometry.new({scrollExtent: headerExtent, maxPaintExtent: headerExtent, paintExtent: headerPaintExtent, cacheExtent: headerCacheExtent, hitTestExtent: headerPaintExtent, hasVisualOverflow: headerExtent > dart.notNull(this.constraints.remainingPaintExtent) || dart.notNull(this.constraints.scrollOffset) > 0.0});
+      } else {
+        dart.nullCheck(this.child).layout(this.constraints.copyWith({scrollOffset: math.max(core.double, 0.0, dart.notNull(this.constraints.scrollOffset) - headerExtent), cacheOrigin: math.min(core.double, 0.0, dart.notNull(this.constraints.cacheOrigin) + headerExtent), overlap: 0.0, remainingPaintExtent: dart.notNull(this.constraints.remainingPaintExtent) - dart.notNull(headerPaintExtent), remainingCacheExtent: dart.notNull(this.constraints.remainingCacheExtent) - dart.notNull(headerCacheExtent)}), {parentUsesSize: true});
+        let childLayoutGeometry = dart.nullCheck(dart.nullCheck(this.child).geometry);
+        if (childLayoutGeometry.scrollOffsetCorrection != null) {
+          this.geometry = new sliver.SliverGeometry.new({scrollOffsetCorrection: childLayoutGeometry.scrollOffsetCorrection});
+          return;
+        }
+        let paintExtent = math.min(core.double, dart.notNull(headerPaintExtent) + math.max(core.num, childLayoutGeometry.paintExtent, childLayoutGeometry.layoutExtent), this.constraints.remainingPaintExtent);
+        this.geometry = new sliver.SliverGeometry.new({scrollExtent: headerExtent + dart.notNull(childLayoutGeometry.scrollExtent), paintExtent: paintExtent, layoutExtent: math.min(core.double, dart.notNull(headerPaintExtent) + dart.notNull(childLayoutGeometry.layoutExtent), paintExtent), cacheExtent: math.min(core.double, dart.notNull(headerCacheExtent) + dart.notNull(childLayoutGeometry.cacheExtent), this.constraints.remainingCacheExtent), maxPaintExtent: headerExtent + dart.notNull(childLayoutGeometry.maxPaintExtent), hitTestExtent: math.max(core.double, dart.notNull(headerPaintExtent) + dart.notNull(childLayoutGeometry.paintExtent), dart.notNull(headerPaintExtent) + dart.notNull(childLayoutGeometry.hitTestExtent)), hasVisualOverflow: childLayoutGeometry.hasVisualOverflow});
+        let childParentData = T.SliverPhysicalParentDataN().as(dart.nullCheck(this.child).parentData);
+        switch (axisDirection) {
+          case C[19] || CT.C19:
+          {
+            dart.nullCheck(childParentData).paintOffset = ui.Offset.zero;
+            break;
+          }
+          case C[20] || CT.C20:
+          {
+            dart.nullCheck(childParentData).paintOffset = new ui.Offset.new(this.calculatePaintOffset(this.constraints, {from: 0.0, to: headerExtent}), 0.0);
+            break;
+          }
+          case C[21] || CT.C21:
+          {
+            dart.nullCheck(childParentData).paintOffset = new ui.Offset.new(0.0, this.calculatePaintOffset(this.constraints, {from: 0.0, to: headerExtent}));
+            break;
+          }
+          case C[22] || CT.C22:
+          {
+            dart.nullCheck(childParentData).paintOffset = ui.Offset.zero;
+            break;
+          }
+          default:
+          {
+            dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+          }
+        }
+      }
+      if (this.header != null) {
+        let headerParentData = T.SliverPhysicalParentDataN().as(dart.nullCheck(this.header).parentData);
+        let childScrollExtent = (t1$0 = (t1$ = this.child, t1$ == null ? null : (t2 = t1$.geometry, t2 == null ? null : t2.scrollExtent)), t1$0 == null ? 0.0 : t1$0);
+        let headerPosition = dart.test(this.sticky) ? math.min(core.double, this.constraints.overlap, dart.notNull(childScrollExtent) - dart.notNull(this.constraints.scrollOffset) - (dart.test(this.overlapsContent) ? dart.nullCheck(this[_headerExtent]) : 0.0)) : -dart.notNull(this.constraints.scrollOffset);
+        this[_isPinned] = dart.test(this.sticky) && (dart.notNull(this.constraints.scrollOffset) + dart.notNull(this.constraints.overlap) > 0.0 || this.constraints.remainingPaintExtent == this.constraints.viewportMainAxisExtent);
+        let headerScrollRatio = (headerPosition - dart.notNull(this.constraints.overlap))[$abs]() / dart.nullCheck(this[_headerExtent]);
+        if (dart.test(this[_isPinned]) && headerScrollRatio <= 1) {
+          t1$1 = this.controller;
+          t1$1 == null ? null : t1$1.stickyHeaderScrollOffset = this.constraints.precedingScrollExtent;
+        }
+        if (T.RenderConstrainedLayoutBuilderOfBoxValueConstraintsOfSliverStickyHeaderState$RenderBox().is(this.header)) {
+          let headerScrollRatioClamped = headerScrollRatio[$clamp](0.0, 1.0);
+          let state = new sliver_sticky_header.SliverStickyHeaderState.new(headerScrollRatioClamped, this[_isPinned]);
+          if (!dart.equals(this[_oldState], state)) {
+            this[_oldState] = state;
+            dart.nullCheck(this.header).layout(new (T.BoxValueConstraintsOfSliverStickyHeaderStateN()).new({value: this[_oldState], constraints: this.constraints.asBoxConstraints()}), {parentUsesSize: true});
+          }
+        }
+        switch (axisDirection) {
+          case C[19] || CT.C19:
+          {
+            dart.nullCheck(headerParentData).paintOffset = new ui.Offset.new(0.0, dart.notNull(dart.nullCheck(this.geometry).paintExtent) - headerPosition - dart.nullCheck(this[_headerExtent]));
+            break;
+          }
+          case C[21] || CT.C21:
+          {
+            dart.nullCheck(headerParentData).paintOffset = new ui.Offset.new(0.0, headerPosition);
+            break;
+          }
+          case C[22] || CT.C22:
+          {
+            dart.nullCheck(headerParentData).paintOffset = new ui.Offset.new(dart.notNull(dart.nullCheck(this.geometry).paintExtent) - headerPosition - dart.nullCheck(this[_headerExtent]), 0.0);
+            break;
+          }
+          case C[20] || CT.C20:
+          {
+            dart.nullCheck(headerParentData).paintOffset = new ui.Offset.new(headerPosition, 0.0);
+            break;
+          }
+          default:
+          {
+            dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+          }
+        }
+      }
+    }
+    hitTestChildren(result, opts) {
+      if (result == null) dart.nullFailed(I[2], 303, 44, "result");
+      let mainAxisPosition = opts && 'mainAxisPosition' in opts ? opts.mainAxisPosition : null;
+      if (mainAxisPosition == null) dart.nullFailed(I[2], 304, 24, "mainAxisPosition");
+      let crossAxisPosition = opts && 'crossAxisPosition' in opts ? opts.crossAxisPosition : null;
+      if (crossAxisPosition == null) dart.nullFailed(I[2], 304, 58, "crossAxisPosition");
+      if (!(dart.notNull(dart.nullCheck(this.geometry).hitTestExtent) > 0.0)) dart.assertFailed(null, I[2], 305, 12, "geometry!.hitTestExtent > 0.0");
+      if (this.header != null && dart.notNull(mainAxisPosition) - dart.notNull(this.constraints.overlap) <= dart.nullCheck(this[_headerExtent])) {
+        return dart.test(this.hitTestBoxChild(new box.BoxHitTestResult.wrap(new sliver.SliverHitTestResult.wrap(result)), dart.nullCheck(this.header), {mainAxisPosition: dart.notNull(mainAxisPosition) - dart.notNull(this.constraints.overlap), crossAxisPosition: crossAxisPosition})) || dart.test(this[_overlapsContent]) && this.child != null && dart.notNull(dart.nullCheck(dart.nullCheck(this.child).geometry).hitTestExtent) > 0.0 && dart.test(dart.nullCheck(this.child).hitTest(result, {mainAxisPosition: dart.notNull(mainAxisPosition) - dart.notNull(this.childMainAxisPosition(this.child)), crossAxisPosition: crossAxisPosition}));
+      } else if (this.child != null && dart.notNull(dart.nullCheck(dart.nullCheck(this.child).geometry).hitTestExtent) > 0.0) {
+        return dart.nullCheck(this.child).hitTest(result, {mainAxisPosition: dart.notNull(mainAxisPosition) - dart.notNull(this.childMainAxisPosition(this.child)), crossAxisPosition: crossAxisPosition});
+      }
+      return false;
+    }
+    childMainAxisPosition(child) {
+      T.RenderObjectN().as(child);
+      if (dart.equals(child, this.header)) return dart.test(this[_isPinned]) ? 0.0 : -(dart.notNull(this.constraints.scrollOffset) + dart.notNull(this.constraints.overlap));
+      if (dart.equals(child, this.child)) return this.calculatePaintOffset(this.constraints, {from: 0.0, to: dart.nullCheck(this.headerLogicalExtent)});
+      return 0.0;
+    }
+    childScrollOffset(child) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(I[2], 342, 42, "child");
+      if (!dart.equals(child.parent, this)) dart.assertFailed(null, I[2], 343, 12, "child.parent == this");
+      if (dart.equals(child, this.child)) {
+        return this[_headerExtent];
+      } else {
+        return super.childScrollOffset(child);
+      }
+    }
+    applyPaintTransform(child, transform) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(I[2], 352, 41, "child");
+      if (transform == null) dart.nullFailed(I[2], 352, 56, "transform");
+      let childParentData = sliver.SliverPhysicalParentData.as(child.parentData);
+      childParentData.applyPaintTransform(transform);
+    }
+    paint(context, offset) {
+      if (context == null) dart.nullFailed(I[2], 359, 30, "context");
+      if (offset == null) dart.nullFailed(I[2], 359, 46, "offset");
+      if (dart.test(dart.nullCheck(this.geometry).visible)) {
+        if (this.child != null && dart.test(dart.nullCheck(dart.nullCheck(this.child).geometry).visible)) {
+          let childParentData = sliver.SliverPhysicalParentData.as(dart.nullCheck(this.child).parentData);
+          context.paintChild(dart.nullCheck(this.child), offset['+'](childParentData.paintOffset));
+        }
+        if (this.header != null) {
+          let headerParentData = sliver.SliverPhysicalParentData.as(dart.nullCheck(this.header).parentData);
+          context.paintChild(dart.nullCheck(this.header), offset['+'](headerParentData.paintOffset));
+        }
+      }
+    }
+  };
+  (sliver_sticky_header$.RenderSliverStickyHeader.new = function(opts) {
+    let header = opts && 'header' in opts ? opts.header : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let overlapsContent = opts && 'overlapsContent' in opts ? opts.overlapsContent : false;
+    if (overlapsContent == null) dart.nullFailed(I[2], 17, 10, "overlapsContent");
+    let sticky = opts && 'sticky' in opts ? opts.sticky : true;
+    if (sticky == null) dart.nullFailed(I[2], 18, 10, "sticky");
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    this[_oldState] = null;
+    this[_headerExtent] = null;
+    this[__RenderSliverStickyHeader__isPinned] = null;
+    this[__RenderSliverStickyHeader__isPinned_isSet] = false;
+    this[_header$] = null;
+    this[_child] = null;
+    this[_overlapsContent] = overlapsContent;
+    this[_sticky] = sticky;
+    this[_controller$] = controller;
+    sliver_sticky_header$.RenderSliverStickyHeader.__proto__.new.call(this);
+    this.header = T.RenderBoxN().as(header);
+    this.child = child;
+  }).prototype = sliver_sticky_header$.RenderSliverStickyHeader.prototype;
+  dart.addTypeTests(sliver_sticky_header$.RenderSliverStickyHeader);
+  dart.addTypeCaches(sliver_sticky_header$.RenderSliverStickyHeader);
+  dart.setMethodSignature(sliver_sticky_header$.RenderSliverStickyHeader, () => ({
+    __proto__: dart.getMethods(sliver_sticky_header$.RenderSliverStickyHeader.__proto__),
+    computeHeaderExtent: dart.fnType(core.double, []),
+    performLayout: dart.fnType(dart.void, [])
+  }));
+  dart.setGetterSignature(sliver_sticky_header$.RenderSliverStickyHeader, () => ({
+    __proto__: dart.getGetters(sliver_sticky_header$.RenderSliverStickyHeader.__proto__),
+    [_isPinned]: core.bool,
+    overlapsContent: core.bool,
+    sticky: core.bool,
+    controller: dart.nullable(sliver_sticky_header.StickyHeaderController),
+    header: dart.nullable(box.RenderBox),
+    child: dart.nullable(sliver.RenderSliver),
+    headerLogicalExtent: dart.nullable(core.double)
+  }));
+  dart.setSetterSignature(sliver_sticky_header$.RenderSliverStickyHeader, () => ({
+    __proto__: dart.getSetters(sliver_sticky_header$.RenderSliverStickyHeader.__proto__),
+    [_isPinned]: core.bool,
+    overlapsContent: core.bool,
+    sticky: core.bool,
+    controller: dart.nullable(sliver_sticky_header.StickyHeaderController),
+    header: dart.nullable(box.RenderBox),
+    child: dart.nullable(sliver.RenderSliver)
+  }));
+  dart.setLibraryUri(sliver_sticky_header$.RenderSliverStickyHeader, I[3]);
+  dart.setFieldSignature(sliver_sticky_header$.RenderSliverStickyHeader, () => ({
+    __proto__: dart.getFields(sliver_sticky_header$.RenderSliverStickyHeader.__proto__),
+    [_oldState]: dart.fieldType(dart.nullable(sliver_sticky_header.SliverStickyHeaderState)),
+    [_headerExtent]: dart.fieldType(dart.nullable(core.double)),
+    [__RenderSliverStickyHeader__isPinned]: dart.fieldType(dart.nullable(core.bool)),
+    [__RenderSliverStickyHeader__isPinned_isSet]: dart.fieldType(core.bool),
+    [_overlapsContent]: dart.fieldType(core.bool),
+    [_sticky]: dart.fieldType(core.bool),
+    [_controller$]: dart.fieldType(dart.nullable(sliver_sticky_header.StickyHeaderController)),
+    [_header$]: dart.fieldType(dart.nullable(box.RenderBox)),
+    [_child]: dart.fieldType(dart.nullable(sliver.RenderSliver))
+  }));
+  dart.trackLibraries("packages/flutter_sticky_header/src/widgets/sliver_sticky_header.dart", {
+    "package:flutter_sticky_header/src/widgets/sliver_sticky_header.dart": sliver_sticky_header,
+    "package:flutter_sticky_header/src/rendering/sliver_sticky_header.dart": sliver_sticky_header$,
+    "package:flutter_sticky_header/flutter_sticky_header.dart": flutter_sticky_header
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["sliver_sticky_header.dart","../rendering/sliver_sticky_header.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/flutter_sticky_header/src/widgets/sliver_sticky_header.dart.lib.js"}');
+  // Exports:
+  return {
+    src__widgets__sliver_sticky_header: sliver_sticky_header,
+    src__rendering__sliver_sticky_header: sliver_sticky_header$,
+    flutter_sticky_header: flutter_sticky_header
+  };
+}));
+
+//# sourceMappingURL=sliver_sticky_header.dart.lib.js.map

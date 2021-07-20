@@ -9,7 +9,7 @@ const Color BANNER_BG_COLOR = Color(0xFFECF0FF);
 const String BANNER_PERSON_NAME = 'Kenneth P Mogopodi';
 const String TITLE_PERSON_NAME = 'Kenneth Mogopodi';
 
-const String PORTFOLIO_IMG = 'assets/portfolio_img.jpg';
+const String PORTFOLIO_IMG = 'assets/portfolio.png';
 const List<String> DESIGNATIONS = [
   'Android Developer.',
   'Flutter Developer.',

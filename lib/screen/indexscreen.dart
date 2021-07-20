@@ -52,7 +52,7 @@ class _IndexScreenState extends State<IndexScreen> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.2,
                   ),
-                  Projects(),
+                  //Projects(),
                   Contact(),
                   Footer(),
                 ]),

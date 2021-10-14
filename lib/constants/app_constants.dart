@@ -110,6 +110,12 @@ const List<ResumeModel> kExperience = [
 
 const List<ResumeModel> kCertifications = [
   ResumeModel(
+      period: '2021',
+      title: 'Cyber Sercurity Training',
+      place: 'Edureka',
+      description:
+          'Introduction to Cyber sercurity concepts such as ethical hacking, cryptography, computer networks & security, application security, idAM (identity & access management), vulnerability analysis, malware threats, sniffing, SQL injection, DoS, session hijacking, and various security practices for businesses along with hands-on demonstrations.'),
+  ResumeModel(
       period: '2020',
       title: 'Flutter Development Bootcamp with Dart',
       place: 'Udemy',
